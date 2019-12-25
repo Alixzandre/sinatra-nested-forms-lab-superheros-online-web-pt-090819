@@ -8,7 +8,7 @@ class App < Sinatra::Base
       erb :super_hero
     end
     
-    get '/teams' do
+    get 'contr/teams' do
       @team = Team.new(params[:team])
       
       params[:team][:members].each do |member_params|
